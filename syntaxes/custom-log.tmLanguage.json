@@ -4,34 +4,56 @@
 	"patterns": [
 		{
 		"include": "#log-level"
-		}
+
+		},
+		{
+			"include": "#ip"
+		  },
+		  {
+			"include": "#url"
+		  },
+		  {
+			"include": "#path"
+		  }
 	],
 	"repository": {
 		"log-level": {
-		"name": "keyword.other.log-level.custom-log",
-		"match": "\\b(TRACE|DEBUG|INFO|WARN|WARNING|ERROR|FATAL|CRITICAL|error|fatal|Error|Fatal|Info)\\b",
-		"captures": {
-			"1": {
-			"patterns": [
-				{
-				"match": "ERROR|FATAL|error|fatal|Error|Fatal",
-				"name": "keyword.other.error.custom-log"
-				},
-				{
-				"match": "INFO|Info",
-				"name": "keyword.other.info.custom-log"
-				},
-				{
-				"match": "DEBUG|TRACE|Debug|Trace",
-				"name": "keyword.other.debug.custom-log"
-				},
-				{
-				"match": "WARN|WARNING",
-				"name": "keyword.other.warning.custom-log"
+			"name": "keyword.other.log-level.custom-log",
+			"match": "\\b(TRACE|DEBUG|INFO|WARN|WARNING|ERROR|FATAL|CRITICAL|error|fatal|Error|Fatal|Info|WARNING|warning|Warning)\\b",
+			"captures": {
+				"1": {
+				"patterns": [
+					{
+					"match": "ERROR|FATAL|error|fatal|Error|Fatal",
+					"name": "keyword.other.error.custom-log"
+					},
+					{
+					"match": "INFO|Info",
+					"name": "keyword.other.info.custom-log"
+					},
+					{
+					"match": "DEBUG|TRACE|Debug|Trace",
+					"name": "keyword.other.debug.custom-log"
+					},
+					{
+					"match": "WARN|WARNING",
+					"name": "keyword.other.warning.custom-log"
+					}
+				]
 				}
-			]
 			}
-		}
+		},
+		"ip": {
+			"name": "constant.numeric.ip.custom-log",
+			"match": "\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\b"
+		},
+		"url": {
+			"name": "string.unquoted.url.custom-log",
+			"match": "(https?://[^\\s]+)"
+		},
+		"path": {
+			"name": "string.unquoted.path.custom-log",
+			"match": "(?:/[^/\\s]+)+/?"
 		}
 	},
 	"scopeName": "source.custom-log"

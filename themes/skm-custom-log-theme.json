@@ -1,0 +1,51 @@
+{
+    "name": "Custom Log Theme",
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmTheme.schema.json",
+    "include": "Dark+", 
+    "tokenColors": [
+      {
+        "scope": "keyword.other.error.custom-log",
+        "settings": {
+          "foreground": "#FF5555", 
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": "keyword.other.info.custom-log",
+        "settings": {
+          "foreground": "#55FF55"
+        }
+      },
+      {
+        "scope": "keyword.other.debug.custom-log",
+        "settings": {
+          "foreground": "#569CD6"
+        }
+      },
+      {
+        "scope": "keyword.other.warning.custom-log",
+        "settings": {
+          "foreground": "#FFAA00"
+        }
+      },
+      {
+        "scope": "constant.numeric.ip.custom-log",
+        "settings": {
+          "foreground": "#8888FF"
+        }
+      },
+      {
+        "scope": "string.unquoted.url.custom-log",
+        "settings": {
+          "foreground": "#55FFFF",
+          "fontStyle": "underline"
+        }
+      },
+      {
+        "scope": "string.unquoted.path.custom-log",
+        "settings": {
+          "foreground": "#FFAA55"
+        }
+      }
+    ]
+  }

@@ -2,13 +2,14 @@
   "name": "skm-custom-log",
   "displayName": "Custom Log Highlighter",
   "description": "Custom syntax highlighting for .log files in VS Code",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "skm",
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Other"
   ],
   "contributes": {
     "languages": [{
@@ -21,7 +22,28 @@
       "language": "custom-log",
       "scopeName": "source.custom-log",
       "path": "./syntaxes/custom-log.tmLanguage.json"
-    }]
+    }],
+    "themes": [
+    {
+      "label": "Custom Log Theme",
+      "uiTheme": "vs-dark",
+      "path": "./themes/skm-custom-log-theme.json"
+    }],
+    "configuration": {
+      "title": "Custom Log Highlighter",
+      "properties": {
+        "customLogHighlighter.logLevels": {
+          "type": "array",
+          "default": ["TRACE", "DEBUG", "INFO", "NOTICE", "WARN", "WARNING", "ERROR", "FATAL", "CRITICAL"],
+          "description": "List of log levels to highlight (case-insensitive)."
+        },
+        "customLogHighlighter.enableComplexPatterns": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable highlighting for IPs, URLs, and paths (disable for large files)."
+        }
+      }
+    }
   },
   "repository": {
     "type": "git",
