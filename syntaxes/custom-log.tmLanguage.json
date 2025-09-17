@@ -9,7 +9,7 @@
 	"repository": {
 		"log-level": {
 		"name": "keyword.other.log-level.custom-log",
-		"match": "\\b(TRACE|DEBUG|INFO|WARN|WARNING|ERROR|FATAL)\\b",
+		"match": "\\b(TRACE|DEBUG|INFO|WARN|WARNING|ERROR|FATAL|CRITICAL|error|fatal|Error|Fatal|Info)\\b",
 		"captures": {
 			"1": {
 			"patterns": [
