@@ -2,9 +2,10 @@
   "name": "skm-custom-log",
   "displayName": "Custom Log Highlighter",
   "description": "Custom syntax highlighting for .log files in VS Code",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "publisher": "skm",
   "engines": {
-    "vscode": "^1.104.0"
+    "vscode": "^1.80.0"
   },
   "categories": [
     "Programming Languages"
@@ -21,5 +22,9 @@
       "scopeName": "source.custom-log",
       "path": "./syntaxes/custom-log.tmLanguage.json"
     }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srijidhkm/skm-custom-log.git"
   }
 }
