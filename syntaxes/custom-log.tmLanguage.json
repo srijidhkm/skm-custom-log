@@ -1,0 +1,52 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Custom Log",
+	"patterns": [
+		{
+		"include": "#timestamp"
+		},
+		{
+		"include": "#log-level"
+		},
+		{
+		"include": "#message"
+		}
+	],
+	"repository": {
+		"timestamp": {
+			"name": "constant.numeric.timestamp.custom-log",
+			"match": "\\[(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2}) (?<hour>\\d{2}): (?<minute>\\d{2}): (?<second>\\d{2})\\]"
+		},
+		"log-level": {
+		"name": "keyword.other.log-level.custom-log",
+		"match": "\\b(TRACE|DEBUG|INFO|WARN|WARNING|ERROR|FATAL)\\b",
+		"captures": {
+			"1": {
+			"patterns": [
+				{
+				"match": "ERROR|FATAL",
+				"name": "keyword.other.error.custom-log"
+				},
+				{
+				"match": "INFO",
+				"name": "keyword.other.info.custom-log"
+				},
+				{
+				"match": "DEBUG|TRACE",
+				"name": "keyword.other.debug.custom-log"
+				},
+				{
+				"match": "WARN|WARNING",
+				"name": "keyword.other.warning.custom-log"
+				}
+			]
+			}
+		}
+		},
+		"message": {
+		"name": "string.unquoted.message.custom-log",
+		"match": ":(.*)"
+		}
+	},
+	"scopeName": "source.custom-log"
+}

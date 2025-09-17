@@ -1,0 +1,25 @@
+{
+  "name": "skm-custom-log",
+  "displayName": "Custom Log Highlighter",
+  "description": "Custom syntax highlighting for .log files in VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "custom-log",
+      "aliases": ["Custom Log", "custom-log"],
+      "extensions": [".log"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "custom-log",
+      "scopeName": "source.custom-log",
+      "path": "./syntaxes/custom-log.tmLanguage.json"
+    }]
+  }
+}
