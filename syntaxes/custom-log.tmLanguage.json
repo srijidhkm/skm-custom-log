@@ -14,15 +14,15 @@
 			"1": {
 			"patterns": [
 				{
-				"match": "(?i:ERROR|FATAL)",
+				"match": "ERROR|FATAL|error|fatal|Error|Fatal",
 				"name": "keyword.other.error.custom-log"
 				},
 				{
-				"match": "INFO",
+				"match": "INFO|Info",
 				"name": "keyword.other.info.custom-log"
 				},
 				{
-				"match": "DEBUG|TRACE",
+				"match": "DEBUG|TRACE|Debug|Trace",
 				"name": "keyword.other.debug.custom-log"
 				},
 				{
